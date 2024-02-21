@@ -1,0 +1,59 @@
+<DOCTYPEhtml>
+<html>
+  <head>
+    <title>tp2</title>
+	<meta charset="UTF-8"/>
+  </head>
+  <body>
+    <h1 align="center">formulaire de contact</h1>
+	<form action="https://httpbin.org/get" method="get">
+	  <fieldset>
+	    <legend>Vos coordonées</legend>
+	    <label for="email">Quel est votre e-mail?</label>
+	    <input type="mail" name="email">
+	    <label for="naissance">Date de naissance:</label>
+	    <input type="date" name="naissance">
+	    <label for="pseudo">Votre pseudo:</label>
+	    <input type="text" name="pseudo">
+	    <label for="tel">Votre num tel:</label>
+	    <input type="tel" name="tel">
+		<label for="mot de pass">Votre mot de passe:</label>
+		<input type="password" name="mot de pass">
+		<label for="coleur">Votre coleur preferée:</label>
+		<input type="color" name="coleur">
+	  </fieldset>
+	  <fieldset>
+	    <legend>Votre souhait</legend>
+		<p>
+		  <label>Faites un souhait que vous voudriez voir exaucé: </label>
+		  <input type="radio">
+		  <label>Etre riche</label>
+		  <input type="radio">
+		  <label>Etre célèbre</label>
+		  <input type="radio">
+		  <label>Etre encore plus intelligent</label>
+		  <input type="radio">
+		  <label>Autre...</label>
+		</p>
+		<p>
+		  <label>Si"Autre"!,veuillez préciser:</label>
+		  <textarea col="3" rows="6"></textarea>
+		</p>
+		<p>Cochez les aliments que vous aimez manger:</p>
+		<p>
+		  <input type="checkbox">
+		  <label>Frites</label>
+		</p>
+		<p>
+		  <input type="checkbox">
+		  <label>Steak haché</label>
+		</p>
+		<p>
+   		  <input type="checkbox">
+		  <label>Eprinards</label>
+		</p>
+	  </fieldset>
+	  <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Envoyer</button>
+	</form>
+  </body>
+</html>
