@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+.parent {
+	background-color: blue;
+	width: 400px;
+	height: 200px;
+	overflow: hidden;
+	padding: 10px;
+	margin: auto;
+}
+.parent .left,
+.parent .right {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.left {
+	background-color: #ddd;
+}
+.right {
+	background-color: #eee;
+}
+.up {
+	background-color: red;
+	height: 50%;
+}
+.down {
+	background-color: green;
+	height: 50%;
+}
+hr  {
+	background-color: #000fff;
+}
+.filter {
+	margin: 10px 25%;
+	transition: 1s;
+	filter: grayscale(60%);
+	background-color: red;
+	color: green;
+	width: 50%;
+	height: 30px;
+	text-align: center;
+	pointer-events: visible;
+	caret-color: #ffeb3b;
+}
+.filter:hover {
+	filter: grayscale(20%);
+	color: black;
+	transform-origin: 50% 50%;
+	transform: scale(1.7) rotate(-6deg) translate(10px, 20px) skew(7deg, 10deg);
+}
+/* matrix (scaleX,skewY,skewX,scaleY,translateX,translateY) */

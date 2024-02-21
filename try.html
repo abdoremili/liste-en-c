@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <title>Dido</title>
+  <link rel="stylesheet" href="css1/try.css" />
+ </head>
+ <body>
+  <div class="parent">
+  <div class="left">
+	<input type="button" value="0" onclick="this.value=Number(this.value)+1">
+  </div>
+  <div class="right">
+	<div class="up"></div>
+	<div class="down"></div>
+  </div>
+  </div>
+  <hr size="8" width="50%">
+  <div class="filter">you are in hover position</div>
+  <hr size="8" width="50%">
+  <form action="https://httpbin.org/get" method="get">
+    <fieldset align="center">
+	  <legend>personal info</legend>
+      <p><label for="name">f_name:</label>
+	    <input type="text" name="full_name" id="name" placeholder="hahaha" required autocomplete="on" autofocus>
+	  </p>
+	  <p><label for="password">password:</label>
+	    <input type="password" name="password" id="password" placeholder="hohoho" required>
+	  </p>
+	  <p><label for="phone">can I call you:</label>
+	    <input type="tel" name="phone" id="phone" placeholder="just don't" pattern="[0-9]{10}" value="0000000000">
+	  </p>
+	  <p><label for="year">your birth year:</label>
+	    <input type="number" name="b_year" id="year" required min="1990" max="2008" step="1" value="2004">
+	  </p>
+	  <p>
+	    <label for="coffee">favorite coffee:</label>
+	    <select name="coffee" id="coffe" multiple size="5">
+	  	<optgroup label="coffees">
+	  	  <option value="regular">regular</option>
+	  	  <option value="ised">iced</option>
+	  	</optgroup>
+	  	<optgroup label="espresso drink">
+	  	  <option value="latte">latte</option>
+	  	  <option value="cappuccino" selected>cappuccino</option>
+	  	</optgroup>
+	  	<option value="other">other</option>
+	    </select>
+		<input id="t"></input>
+	  </p>-->
+	  <p>
+	    <label for="coffee">favorite coffee:</label>
+	    <input type="text" name="coffee" id="coffee" list="coffee-list">
+	    <datalist id="coffee-list">
+	      <option value="regular">
+	  	  <option value="ised">
+	  	  <option value="latte">
+	  	  <option value="cappuccino">
+	  	  <option value="other">
+	    </datalist>
+	  </p>
+    </fieldset>
+	<br>
+	<fieldset>
+	  <legend>favorite food</legend>
+	  <p>
+	    <input type="radio" name="food" id="tacos" value="tacos>
+		<label for="tacos">tacos</label>          
+	  </p>                                        
+	  <p>                                         
+	    <input type="radio" name="food" id="pizza" value="pizza">
+		<label for="pizza">pizza</label>          
+	  </p>                                        
+	  <p>                                         
+	    <input type="radio" name="food" id="tacos" value="other">
+		<label for="other">other</label>
+	  </p>
+	</fieldset>
+	<!-- <input type="checkbox"> -->
+	<br>
+	<button type="submit">Submit</button>
+	<button type="submit" formaction="https://httpbin.org/post" formmethod="post">post</button>
+	<button type="reset">Reset</button>
+  </form>
+  <font face="arial" size="5" color="blue">
+    un texte arial blue
+  </font>
+  <script>
+    coffe.onchange = c;
+	function c(){
+	  t.value = coffe.value;
+	}
+  </script>
+ </body>
+</html>
